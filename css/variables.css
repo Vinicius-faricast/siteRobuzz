@@ -5,6 +5,7 @@
 :root{
     --primary-color: #ebbb4c;
     --primary-color-light: #ffbd26;
+    --primary-color-focus: #ffe609;
     --secundary-color: #443d3d;
     --secundary-color-light:rgb(109, 97, 86);
 }
