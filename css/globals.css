@@ -197,7 +197,7 @@ body{
     text-align: justify;
 }
 
-.services-cta{
+.cta-tittle{
     display: block;
     text-align: center;
     color: var(--primary-color-light);
@@ -257,7 +257,7 @@ body{
     padding: 0.6rem 0.6rem;
     border-radius: 10px;
     outline: 0;
-    max-width: 40%;
+    max-width: 7rem;
     text-align: center;
     cursor: pointer;
 }
@@ -299,5 +299,77 @@ footer{
     background-color: var(--primary-color-light);
     max-width: 100%;
     width: 100%;
+    padding: 2rem 0;
     /* height: 6rem; */
+}
+
+.footer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 100%;
+    width: 80%;
+    gap: 4rem;
+}
+
+.footer-contacts{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.logo-footer{
+    width: 60%;
+}
+
+.text-contact{
+    font-weight: 900;
+    padding: .5rem 0;
+    border-bottom: 2px solid var(--secundary-color);
+    width: 30%;
+}
+
+.footer-phone, .footer-email{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-social-icons{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding-bottom: 1rem;
+}
+
+.icon-fb, .icon-insta, .icon-lkd{
+    width: 13%;
+    cursor: pointer;
+}
+
+.footer-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--secundary-color);
+    padding: 2rem 3rem;
+    border-radius: 5%;
+}
+
+input, textarea{
+    font-size: .8rem;
+    color: var(--secundary-color);
+    padding: 0.5rem;
+    border-radius: .5rem;
+    outline: none;
+}
+
+.contacts-field{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
 }
