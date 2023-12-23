@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 700px) {
+    .itens-menu-bar{
+        justify-content: center;
+    }
+    
+    .menu-itens{
+        display: none;
+    }
+
+    .hero{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    .hero-content{
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .hero-title{
+        max-width: 100%;
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .hero-paragraph{
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-img{
+        width: 100%;
+    }
+
+    .main-title{
+        width: 100%;
+        text-align: center;
+        font-size: 1.3rem;
+        padding-bottom: 1rem;
+    }
+
+    .main-paragraph {
+        width: 100%;
+        line-height: 120%;
+        text-align: center;
+    }
+
+    .aside{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        gap: 2rem;
+        padding: 1rem 2rem;
+        margin: 0 auto;
+    }
+
+    .img-aside{
+        width: 100%;
+        margin-top: -4rem;
+    }
+
+    .aside-content{
+        max-width: 100%; 
+    }
+
+    .aside-title, .aside-paragraph{
+        text-align: center;
+    }
+
+    .cta-tittle{
+        font-size: 1.5rem;
+        font-weight: 900;
+        margin: 1rem auto;
+        width: 90%;
+    }
+
+    .services{
+        display: flex;
+        flex-direction: column;
+        /* margin: 0; */
+    }
+
+    .services-article{
+        max-width: 90%;
+        margin-top: 0;
+    }
+
+    .service-content{
+        align-items: center;
+    }
+
+    .service-title{
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .service-paragraph{
+        text-align: center;
+        max-width: 90%;
+    }
+    
+    .btn-service{
+        display: none;
+    }
+
+    .service-img{
+        display: none;
+    }
+
+    .btn-service-mobile{
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        /* align-items: center; */
+        width: 60%;
+    }
+
+    .btn-mobile{
+        text-decoration: none;
+        background-color: var(--primary-color-light);
+        color: var(--secundary-color);
+        font-weight: 900;
+        font-size: 1.5rem;
+        outline: 0;
+        border-radius: 50%;
+        padding: 0.8rem 1rem;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .footer-form{
+        display: none;
+    }
+
+    .footer-contacts{
+        display: flex;
+        justify-self: center;
+        align-items: center;
+    }
+
+    .logo-footer{
+        display: none;
+    }
+
+    .text-contact{
+        margin: 0 auto;
+        text-align: center;
+        width: 35%;
+    }
+
+    .footer-social-icons{
+        justify-content: center;
+    }
+}

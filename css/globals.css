@@ -272,6 +272,10 @@ body{
     width: 50%;
 }
 
+.btn-service-mobile{
+    display: none;
+}
+
 .btn-service{
     text-decoration: none;
     background-color: var(--primary-color-light);
