@@ -121,7 +121,7 @@
         width: 60%;
     }
 
-    .btn-mobile{
+    .btn-mobile-article{
         text-decoration: none;
         background-color: var(--primary-color-light);
         color: var(--secundary-color);

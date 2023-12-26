@@ -12,6 +12,7 @@
     .btn-mobile{
         display: block;
         border-top: 0.2rem solid var(--secundary-color);
+        background-color: transparent;
         width: 30px;
         border-radius: 0;
         padding: 0;
