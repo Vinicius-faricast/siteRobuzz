@@ -38,6 +38,10 @@ body{
     gap: 2rem;
 }
 
+.btn-mobile{
+    display: none;
+}
+
 .link-nav{
     text-decoration: none;
     color: white;
@@ -76,7 +80,7 @@ body{
     max-width: 1080px;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     gap: 6rem;
     padding: 2rem;
     margin: 6rem auto 0;
