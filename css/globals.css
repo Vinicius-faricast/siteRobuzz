@@ -223,15 +223,21 @@ body{
     gap: 2rem;
 }
 
+.articles-container{
+    display: flex;
+    max-width: 100%;
+}
+
 .services-article{
     display: flex;
     flex-direction: row;
-    max-width: 60%;
+    max-width: 80%;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
     border-radius: 10px;
     padding: 1rem 2rem;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
 }
 
 .service-content{
@@ -275,6 +281,14 @@ body{
 
 .service-img{
     width: 50%;
+}
+
+.item{
+    display: none;
+}
+
+.item-visible{
+    display: flex;
 }
 
 .btn-service-mobile{
