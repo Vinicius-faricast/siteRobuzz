@@ -225,19 +225,28 @@ body{
 
 .articles-container{
     display: flex;
-    max-width: 100%;
+    max-width: 80vw;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 .services-article{
     display: flex;
     flex-direction: row;
+    flex: none;
     max-width: 80%;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
     border-radius: 10px;
     padding: 1rem 2rem;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 1rem 6rem;
+    scroll-snap-align: center;
 }
 
 .service-content{
@@ -283,14 +292,6 @@ body{
     width: 50%;
 }
 
-.item{
-    display: none;
-}
-
-.item-visible{
-    display: flex;
-}
-
 .btn-service-mobile{
     display: none;
 }
@@ -323,7 +324,6 @@ footer{
     max-width: 100%;
     width: 100%;
     padding: 2rem 0;
-    /* height: 6rem; */
 }
 
 .footer-container{

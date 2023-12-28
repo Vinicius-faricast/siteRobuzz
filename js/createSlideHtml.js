@@ -1,32 +1,6 @@
+const articleContainer = document.querySelector('.articles-container');
 const nextBtns = document.querySelectorAll('[data-js="carousel__button--next"]');
 const prevBtns = document.querySelectorAll('[data-js="carousel__button--prev"]');
-const articleContainer = document.querySelector('.articles-container');
-
-let currentIndex = -1
-let lastIndexArticles
-
-const eventNextBtn = () => {
-    nextBtns.forEach(nextBtn => {
-        nextBtn.addEventListener('click', () => {
-            
-            const articleVisible = document.querySelector('.services-article');
-
-            manipulatedCarrosselSlides(currentIndex, true);
-            articleVisible ? articleContainer.removeChild(articleVisible) : '';
-        })
-    })
-}
-
-const eventPrevBtn = () => {
-    prevBtns.forEach(prevBtn => {
-        prevBtn.addEventListener('click', () => {
-            const articleVisible = document.querySelector('.services-article');
-
-            manipulatedCarrosselSlides(currentIndex, false);
-            articleVisible ? articleContainer.removeChild(articleVisible) : '';
-        })
-    })
-}
 
 const fetchArticles = async () => {
     const articlesJson = await fetch('./articles.json');
@@ -46,39 +20,46 @@ const createCarrosselSlides = async () => {
     return articleHTML;
 }
 
-const accIndex = (index, lastIndexArticle) => {
-    currentIndex = index === lastIndexArticle 
-    ? 0
-    : ++currentIndex
-
-    return currentIndex
-}
-
-const decIndex = (index, lastIndexArticle) => {
-    currentIndex = index === 0 
-    ? lastIndexArticle
-    : --currentIndex
-
-    return currentIndex
-}
-
-const manipulatedCarrosselSlides = async (index, type = true) => {
+const createCarrosselSlidesInHtml = async() => {
     const articleHTML = await createCarrosselSlides();
     
-    lastIndexArticles = articleHTML.length -1
+    articleHTML.forEach((article) => {
+        articleContainer.appendChild(article);
+    })
 
-    const currentIndex = type 
-        ? accIndex(index, lastIndexArticles)
-        : decIndex(index, lastIndexArticles);
-    
-    articleContainer.appendChild(articleHTML[currentIndex]);
-    // console.log(articleHTML[currentIndex])
-    // articleContainer.innerHTML = articleHTML[currentIndex]
+    nextSlideService()
+    prevSlideService();
+
+}
+
+const nextSlideService = () => {
+    nextBtns.forEach(nextBtn => {
+        nextBtn.addEventListener('click', () => {
+            ManipulateSlideService(500);
+        })
+    })
+}
+
+const prevSlideService = () => {
+    prevBtns.forEach(prevBtn => {
+        prevBtn.addEventListener('click', () => {
+            ManipulateSlideService(-100);
+        })
+    })
+}
+
+const ManipulateSlideService = leftValue => {
+    articleContainer.scrollBy({
+        top: 0,
+        left: leftValue,
+        behavior: "smooth",
+      });
 }
 
 const ArticleHTMlstructure = ({title, content, image}) => {
     const divArticle = document.createElement('div');
     divArticle.classList.add('services-article');
+    divArticle.setAttribute('data-js', 'services-article')
 
     const divServiceContent = document.createElement('div');
     divServiceContent.classList.add('service-content');
@@ -111,8 +92,6 @@ const ArticleHTMlstructure = ({title, content, image}) => {
     return divArticle;
 }
 
-export const eventCarrosselBtn = () => {
-    manipulatedCarrosselSlides(currentIndex);
-    eventNextBtn();
-    eventPrevBtn();
+export const createArticleServices = () => {
+    createCarrosselSlidesInHtml()
 }
