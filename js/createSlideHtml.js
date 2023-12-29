@@ -56,7 +56,7 @@ const ManipulateSlideService = leftValue => {
       });
 }
 
-const ArticleHTMlstructure = ({title, content, image}) => {
+const ArticleHTMlstructure = ({title, content, image, alt}) => {
     const divArticle = document.createElement('div');
     divArticle.classList.add('services-article');
     divArticle.setAttribute('data-js', 'services-article')
@@ -81,7 +81,7 @@ const ArticleHTMlstructure = ({title, content, image}) => {
     const imgService = document.createElement('img');
     imgService.classList.add('service-img');
     imgService.setAttribute('src', image);
-    imgService.setAttribute('alt', '#');
+    imgService.setAttribute('alt', alt);
 
     divArticle.appendChild(divServiceContent);
     divServiceContent.appendChild(serviceTitle);
