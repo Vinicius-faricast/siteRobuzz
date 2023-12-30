@@ -22,6 +22,7 @@ const toogleMenu = e => {
     linkNav.forEach(link => {
         link.addEventListener('click', () => {
             nav.classList.remove('active');
+            e.target.classList.remove('open');
         })
     })
 }
