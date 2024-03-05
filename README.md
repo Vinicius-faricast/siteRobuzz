@@ -8,4 +8,4 @@ Página de divulgação para prospecção de clientes para empresa Robuzz.
 ![GitHub language count](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
 ![GitHub language count](https://img.shields.io/badge/JS-239120?&style=for-the-badge&logo=css3&logoColor=white)
 
-### [Acesse o link e veja o projeto na integra](https://robuzz.netlify.app/)
+### <a href="https://robuzz.netlify.app/" target="_blank">Acesse o link e veja o projeto na integra</a>
